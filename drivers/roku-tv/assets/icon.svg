@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <rect x="40" y="80" width="176" height="120" rx="12" fill="#662d91"/>
+  <rect x="100" y="200" width="56" height="8" fill="#662d91"/>
+  <rect x="80" y="208" width="96" height="6" rx="3" fill="#662d91"/>
+  <text x="128" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="white">Roku</text>
+</svg>

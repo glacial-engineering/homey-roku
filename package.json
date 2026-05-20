@@ -1,0 +1,8 @@
+{
+  "name": "com.glacialengineering.homey.roku",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
