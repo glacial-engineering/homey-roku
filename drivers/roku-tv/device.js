@@ -9,12 +9,32 @@ class RokuTvDevice extends Homey.Device {
     const host = this.getSetting('host');
     this.log('Initializing with host:', host, 'interval:', this.pollInterval);
 
+    await this._migrateCapabilities();
+
     this.client = new RokuClient(host);
     this._lastActiveAppId = null;
     this._isPlaying = false;
 
     this._registerCapabilityListeners();
     this.driver.recalculateInterval(host);
+  }
+
+  async _migrateCapabilities() {
+    const remove = ['channel_up', 'channel_down'];
+    const add = [
+      'nav_home', 'nav_back', 'nav_up', 'nav_left', 'nav_ok',
+      'nav_right', 'nav_down', 'nav_replay', 'nav_info',
+    ];
+    for (const cap of remove) {
+      if (this.hasCapability(cap)) {
+        await this.removeCapability(cap).catch(this.error);
+      }
+    }
+    for (const cap of add) {
+      if (!this.hasCapability(cap)) {
+        await this.addCapability(cap).catch(this.error);
+      }
+    }
   }
 
   _registerCapabilityListeners() {
@@ -30,12 +50,24 @@ class RokuTvDevice extends Homey.Device {
     this.registerCapabilityListener('volume_mute', async () => {
       await this.client.keypress('VolumeMute');
     });
-    this.registerCapabilityListener('channel_up', async () => {
-      await this.client.keypress('ChannelUp');
-    });
-    this.registerCapabilityListener('channel_down', async () => {
-      await this.client.keypress('ChannelDown');
-    });
+
+    const navMap = {
+      nav_up: 'Up',
+      nav_down: 'Down',
+      nav_left: 'Left',
+      nav_right: 'Right',
+      nav_ok: 'Select',
+      nav_back: 'Back',
+      nav_home: 'Home',
+      nav_info: 'Info',
+      nav_replay: 'InstantReplay',
+    };
+    for (const [cap, key] of Object.entries(navMap)) {
+      this.registerCapabilityListener(cap, async () => {
+        await this.client.keypress(key);
+      });
+    }
+
     this.registerCapabilityListener('speaker_prev', async () => {
       await this.client.keypress('Rev');
     });

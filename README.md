@@ -59,6 +59,37 @@ homey app install
 - Power-on requires the Roku TV to be in network standby (the default). Wake-on-LAN is not implemented.
 - The Roku **Play** key toggles between play and pause; Homey's `speaker_playing` state may drift if the Roku is controlled with a physical remote.
 
+## Troubleshooting
+
+### Buttons do nothing / 403 Forbidden in logs
+
+The Roku TV's network-access setting is too restrictive. ECP control commands (button presses, app launches, etc.) require the TV to allow external network control.
+
+On the Roku TV:
+
+**Settings → System → Advanced system settings → Control by mobile apps → Network access**
+
+Set it to **Permissive** (or **Default**, depending on Roku OS version). If it's set to **Disabled**, all POST requests return `403 Forbidden`.
+
+You can verify the Roku side directly from any machine on the same LAN:
+
+```bash
+curl -v -d '' http://<roku-ip>:8060/keypress/Home
+```
+
+A working Roku returns `HTTP/1.1 200 OK`. A 403 means the setting above needs to change.
+
+### Device not found during auto-discovery
+
+- Make sure Homey and the Roku are on the **same LAN / VLAN** (SSDP uses multicast and does not cross subnets).
+- Try **Enter IP manually** instead — it bypasses discovery entirely.
+- Some routers block SSDP/multicast between wired and wireless segments; check AP isolation settings.
+
+### Device shows as unavailable
+
+- Confirm the Roku's IP hasn't changed (DHCP can reassign). Update the **Host** setting on the device if needed, or reserve a static lease in your router.
+- ECP listens on port `8060`. If the Roku is behind a firewall, allow Homey's IP to reach that port.
+
 ## Changelog
 
 - **1.0.0** — Initial release. SSDP + manual pairing, standard TV capabilities, Flow cards for key/text/app/input.

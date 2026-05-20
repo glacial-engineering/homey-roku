@@ -1,6 +1,6 @@
 {
   "id": "com.glacialengineering.homey.roku",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -17,6 +17,71 @@
     "name": "Glacial Engineering",
     "email": "github@glacial.engineering"
   },
+  "capabilities": {
+    "nav_up": {
+      "type": "boolean",
+      "title": { "en": "Up" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
+    "nav_down": {
+      "type": "boolean",
+      "title": { "en": "Down" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
+    "nav_left": {
+      "type": "boolean",
+      "title": { "en": "Left" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
+    "nav_right": {
+      "type": "boolean",
+      "title": { "en": "Right" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
+    "nav_ok": {
+      "type": "boolean",
+      "title": { "en": "OK" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
+    "nav_back": {
+      "type": "boolean",
+      "title": { "en": "Back" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
+    "nav_home": {
+      "type": "boolean",
+      "title": { "en": "Home" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
+    "nav_info": {
+      "type": "boolean",
+      "title": { "en": "Info (*)" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
+    "nav_replay": {
+      "type": "boolean",
+      "title": { "en": "Replay" },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    }
+  },
   "drivers": [
     {
       "id": "roku-tv",
@@ -27,14 +92,21 @@
       "icon": "/assets/icon.svg",
       "capabilities": [
         "onoff",
-        "volume_up",
+        "nav_home",
+        "nav_back",
+        "nav_up",
+        "nav_left",
+        "nav_ok",
+        "nav_right",
+        "nav_down",
+        "nav_replay",
+        "nav_info",
+        "speaker_prev",
+        "speaker_playing",
+        "speaker_next",
         "volume_down",
         "volume_mute",
-        "channel_up",
-        "channel_down",
-        "speaker_prev",
-        "speaker_next",
-        "speaker_playing"
+        "volume_up"
       ],
       "settings": [
         {
