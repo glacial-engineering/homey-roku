@@ -2,6 +2,10 @@
 
 Athom Homey smart-home app to control [Roku](https://www.roku.com/) TVs over the local network using the [External Control Protocol (ECP)](https://developer.roku.com/docs/developer-program/dev-tools/external-control-api.md).
 
+## AI Development Disclosure
+
+This app was coded almost entirely with AI assistance and reviewed lightly. The architectural guidance was sound and provided by a developer with more than 30 years of experience.
+
 ## Features
 
 - Control Roku TVs from Homey: power, volume, channel, transport, app launch

@@ -1,5 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="32" fill="#662d91"/>
-  <text x="128" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="white">Roku</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <rect x="80" y="60" width="340" height="260" rx="24" fill="none" stroke="#7C3AED" stroke-width="20"/>
+  <rect x="100" y="80" width="300" height="200" rx="8" fill="#A78BFA"/>
+  <rect x="120" y="100" width="80" height="60" rx="4" fill="#EC4899"/>
+  <rect x="210" y="100" width="80" height="60" rx="4" fill="#3B82F6"/>
+  <rect x="300" y="100" width="80" height="60" rx="4" fill="#10B981"/>
+  <rect x="120" y="170" width="80" height="60" rx="4" fill="#F59E0B"/>
+  <rect x="210" y="170" width="80" height="60" rx="4" fill="#EF4444"/>
+  <rect x="300" y="170" width="80" height="60" rx="4" fill="#8B5CF6"/>
+  <path d="M200 340 L300 340 L280 400 L220 400 Z" fill="#7C3AED"/>
+  <rect x="170" y="400" width="160" height="16" rx="8" fill="#7C3AED"/>
 </svg>

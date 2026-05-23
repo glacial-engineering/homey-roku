@@ -1,22 +1,38 @@
 {
   "id": "com.glacialengineering.homey.roku",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
+  "platforms": ["local"],
+  "brandColor": "#7C3AED",
   "name": {
     "en": "Roku"
   },
   "description": {
-    "en": "Control Roku TVs and devices via the External Control Protocol"
+    "en": "Your favorite streaming, one command away"
   },
   "category": [
     "video"
   ],
+  "tags": {
+    "en": ["roku", "tv", "streaming", "remote", "media"]
+  },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
   "permissions": [],
   "author": {
     "name": "Glacial Engineering",
     "email": "github@glacial.engineering"
   },
+  "source": "https://github.com/glacial-engineering/homey-roku",
+  "homepage": "https://github.com/glacial-engineering/homey-roku",
+  "bugs": {
+    "url": "https://github.com/glacial-engineering/homey-roku/issues"
+  },
+  "support": "mailto:github@glacial.engineering",
   "capabilities": {
     "nav_up": {
       "type": "boolean",
@@ -90,6 +106,13 @@
       },
       "class": "tv",
       "icon": "/assets/icon.svg",
+      "platforms": ["local"],
+      "connectivity": ["lan"],
+      "images": {
+        "small": "/drivers/roku-tv/assets/images/small.png",
+        "large": "/drivers/roku-tv/assets/images/large.png",
+        "xlarge": "/drivers/roku-tv/assets/images/xlarge.png"
+      },
       "capabilities": [
         "onoff",
         "nav_home",
@@ -195,6 +218,7 @@
           {
             "name": "key",
             "type": "dropdown",
+            "title": { "en": "Key" },
             "values": [
               { "id": "Home", "label": { "en": "Home" } },
               { "id": "Back", "label": { "en": "Back" } },
@@ -233,6 +257,7 @@
           {
             "name": "input",
             "type": "dropdown",
+            "title": { "en": "Input" },
             "values": [
               { "id": "InputTuner", "label": { "en": "Tuner" } },
               { "id": "InputHDMI1", "label": { "en": "HDMI 1" } },
@@ -261,6 +286,7 @@
           {
             "name": "text",
             "type": "text",
+            "title": { "en": "Text" },
             "placeholder": { "en": "Hello" }
           }
         ]
@@ -282,6 +308,7 @@
           {
             "name": "app",
             "type": "autocomplete",
+            "title": { "en": "App" },
             "placeholder": { "en": "Select app" }
           }
         ]
