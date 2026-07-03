@@ -1,12 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <rect x="60" y="80" width="380" height="260" rx="20" fill="none" stroke="#7C3AED" stroke-width="18"/>
-  <rect x="78" y="98" width="344" height="200" rx="8" fill="#A78BFA"/>
-  <rect x="100" y="120" width="90" height="70" rx="4" fill="#EC4899"/>
-  <rect x="200" y="120" width="90" height="70" rx="4" fill="#3B82F6"/>
-  <rect x="300" y="120" width="90" height="70" rx="4" fill="#10B981"/>
-  <rect x="100" y="200" width="90" height="70" rx="4" fill="#F59E0B"/>
-  <rect x="200" y="200" width="90" height="70" rx="4" fill="#EF4444"/>
-  <rect x="300" y="200" width="90" height="70" rx="4" fill="#8B5CF6"/>
-  <path d="M190 360 L310 360 L290 420 L210 420 Z" fill="#7C3AED"/>
-  <rect x="160" y="420" width="180" height="16" rx="8" fill="#7C3AED"/>
+  <path d="M70 110 H370 V320 H70 Z" fill="none" stroke="currentColor" stroke-width="24"/>
+  <path d="M370 110 L430 150 V360 L370 320 Z" fill="none" stroke="currentColor" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M70 320 L130 360 H430" fill="none" stroke="currentColor" stroke-width="24" stroke-linejoin="round"/>
+  <rect x="190" y="400" width="120" height="18" rx="9" fill="currentColor"/>
+  <path d="M200 400 L250 350 L300 400 Z" fill="currentColor"/>
 </svg>

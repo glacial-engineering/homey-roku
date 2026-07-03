@@ -85,7 +85,7 @@
     },
     "nav_info": {
       "type": "boolean",
-      "title": { "en": "Info (*)" },
+      "title": { "en": "Info" },
       "uiComponent": "button",
       "getable": false,
       "setable": true
