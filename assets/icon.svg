@@ -1,6 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-  <rect x="70" y="90" width="360" height="230" rx="18" fill="none" stroke="currentColor" stroke-width="26"/>
-  <path d="M215 370 L285 370 L300 410 L200 410 Z" fill="currentColor"/>
-  <rect x="160" y="410" width="180" height="20" rx="10" fill="currentColor"/>
-  <path d="M195 155 L195 255 L280 205 Z" fill="currentColor"/>
+  <!-- streaming signal waves -->
+  <path d="M205 120 C230 95 270 95 295 120" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round"/>
+  <path d="M170 85 C215 40 285 40 330 85" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round"/>
+  <!-- remote body -->
+  <rect x="185" y="150" width="130" height="320" rx="55" fill="none" stroke="currentColor" stroke-width="26"/>
+  <!-- directional pad ring -->
+  <circle cx="250" cy="235" r="48" fill="none" stroke="currentColor" stroke-width="24"/>
+  <circle cx="250" cy="235" r="12" fill="currentColor"/>
+  <!-- buttons -->
+  <circle cx="220" cy="335" r="14" fill="currentColor"/>
+  <circle cx="280" cy="335" r="14" fill="currentColor"/>
+  <circle cx="220" cy="395" r="14" fill="currentColor"/>
+  <circle cx="280" cy="395" r="14" fill="currentColor"/>
 </svg>
